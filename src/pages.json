@@ -1,0 +1,191 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/home/index",
+      "style": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/lookingGoods/index",
+      "style": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/runGoods/index",
+      "style": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/service/index",
+      "style": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/personage/index",
+      "style": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true,
+        "app-plus": {
+          "bounce": "none"
+        }
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    }
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#C0C4CC",
+    "selectedColor": "#3A65FF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/lookingGoods/index",
+        "iconPath": "/static/tabbar/index_a.png",
+        "selectedIconPath": "static/tabbar/index_b.png",
+        "text": "找货"
+      },
+      {
+        "pagePath": "pages/runGoods/index",
+        "iconPath": "static/tabbar/process_a.png",
+        "selectedIconPath": "static/tabbar/process_b.png",
+        "text": "跑货"
+      },
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/tabbar/center.png",
+        "selectedIconPath": "static/tabbar/center.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/service/index",
+        "iconPath": "static/tabbar/app_a.png",
+        "selectedIconPath": "static/tabbar/app_b.png",
+        "text": "营运"
+      },
+      {
+        "pagePath": "pages/personage/index",
+        "iconPath": "static/tabbar/mine_a.png",
+        "selectedIconPath": "static/tabbar/mine_b.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "subpackages": [
+    {
+      //运单详情
+      "root": "pages_waybill",
+      "pages": [
+        {
+          "path": "waybill/index",
+          "style": {
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom",
+            "app-plus": {
+              "titleNView": false,
+              "bounce": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      //[我的 &  设置类]设置分包
+      "root": "pages_setUp",
+      "pages": [
+        {
+          "path": "personage/index",
+          "style": {
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom",
+            "app-plus": {
+              "titleNView": false,
+              "bounce": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      //货源包
+      "root": "pages_goodesSource",
+      "pages": [
+        {
+          "path": "goodesSource/index",
+          "style": {
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom",
+            "app-plus": {
+              "titleNView": false,
+              "bounce": "none"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  //定义预加载
+  "preloadRule": {
+    //当访问到该路由的页面时，会顺带预加载对应的包(可以是主包，也可以是子包)
+    "pages_waybill/waybill/index": {
+      "network": "all",
+      "packages": ["pages_waybill"]
+    }
+  },
+
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "uniIdRouter": {},
+  "sitemapLocation": "sitemap.json"
+}

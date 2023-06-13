@@ -1,0 +1,12 @@
+<view class="tab-bar">
+  <!-- style="background: url('{{background}}') no-repeat; background-size: 100% auto" -->
+  <view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab" >
+    <view class="center_part" >
+      <view class="center_part_code" wx:if="{{item.isSpecial}}">
+        <image class=" center-has-noimg" src="../image/qrCode.png" ></image>
+      </view>
+      <image class="center-has-image {{index == 2 ? 'icon-home' : ''}}" src="{{selected === index ? item.selectedIconPath : item.iconPath}}" wx:else></image>
+    </view>
+    <view style="color: {{selected === index ? selectedColor : color}}" class="cover-text">{{item.text}}</view>
+  </view>
+</view>

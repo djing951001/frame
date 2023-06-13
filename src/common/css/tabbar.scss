@@ -1,0 +1,49 @@
+.bar-frame{
+	font-family: 'PingFang Regular';
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	width: 100%;
+	color: #BCC4E3;
+	font-size: 20upx;
+	border-top: 1upx solid #F0F0F0;
+	.bar-icon{
+		margin-bottom: 6upx;
+		margin-top: 2upx;
+		width: 48upx;
+		height: 48upx;
+	}
+	.bar-ontitle{
+		color: #3A65FF;
+	}
+	.bar-workframe{
+		width: 150upx;
+		.bar-work{
+			height: 80upx;
+			width: 80upx;
+			position: relative;
+			bottom: 15px;
+		}
+	}
+}
+
+/**
+* @description: 工作台样式
+* 使用选择器来控制指定的元素样式
+* 当满足 正数第三个且倒数第三个时，判断为存在中间按钮，添加样式
+*/
+
+.uni-tabbar__item:nth-child(4).uni-tabbar__item:nth-last-child(3) {
+	.uni-tabbar__bd{
+		.uni-tabbar__icon{
+			width: 146rpx !important;
+			height: 146rpx !important;
+			margin-bottom: 26rpx !important;
+		}
+	}
+}
+
+.tab-bar-item cover-image {
+  width: 127px;
+  height: 127px;
+}

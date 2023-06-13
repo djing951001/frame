@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "types": [
+      "miniprogram-api-typings",
+      "mini-types"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/api/*": ["src/api/*"],
+      "@/boostrap/*": ["src/boostrap/*"],
+      "@/common/*": ["src/common/*"],
+      "@/components/*": ["src/components/*"],
+      "@/store/*": ["src/store/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/pages_waybill/*": ["src/pages_waybill/*"],
+      "@/uni_modules/*": ["src/uni_modules/*"],
+      "vue": ["node_modules/vue"]
+    }
+  }
+}
